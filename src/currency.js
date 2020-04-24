@@ -1,8 +1,10 @@
 export class MoneyExchanger {
     constructor() {
+        this.conversionKeys;
+        this.conversionValues;
         this.conversionRate;
         this.targetCurrency;
-        this.baseAmount
+        this.baseAmount;
         this.targetAmount;
     }
     async exchangeCurrency() {
@@ -27,5 +29,15 @@ export class MoneyExchanger {
 
     convert() {
         this.targetAmount = (this.baseAmount * this.conversionRate)
+    }
+
+    getConversionRate() {
+        for (let i = 0; i <= this.conversionKeys.length; i++) {
+            if (this.conversionKeys[i] == this.targetCurrency) {
+                this.exchangeRate = this.conversionValues[i]
+            }
+            break
+        }
+
     }
 }
