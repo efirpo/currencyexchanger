@@ -8,27 +8,23 @@ $(document).ready(function () {
     event.preventDefault();
     (async () => {
       let moolah = new MoneyExchanger();
+      const response = await moolah.exchangeCurrency();
       let amount = $("#amount").val();
       let changeTo = $("#target").val();
-      const response = await moolah.exchangeCurrency();
-      moolah.conversionKeys = Object.keys(response.conversion_rates)
-      moolah.conversionValues = Object.values(response.conversion_rates)
       moolah.baseAmount = amount
       moolah.targetCurrency = changeTo
       moolah.conversionRates = Object.entries(response.conversion_rates)
       moolah.getConversionRate();
       moolah.convert();
       console.log(moolah.targetAmount)
-      // console.log(moolah.conversionRates)
-      // console.log(moolah.targetCurrency)
-      // console.log(moolah.exchangeRate)
-      // console.log(response);
-      $("#results").append(moolah.targetAmount)
-      // function getAmount(response) {
-      //   $("#results").append(`${response.conversion_rate} <br> ${response.conversion_result} <br> ${response.target}`)
-
-      // }
-      // getAmount(response);
+      checkResponse(response);
+      function checkResponse(response) {
+        if (response == undefined) {
+          $("#results").append("We're sorry, something went wrong. Please try a different currency.")
+        } else {
+          $("#results").append(`Your ${moolah.baseAmount} USD converts to ${moolah.targetAmount} ${moolah.targetCurrency}`)
+        }
+      }
     })();
   });
 

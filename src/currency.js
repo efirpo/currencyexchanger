@@ -22,7 +22,7 @@ export class MoneyExchanger {
 
             return jsonResponse;
         } catch (error) {
-            return false;
+            alert(error)
         }
     }
 
