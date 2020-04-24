@@ -1,9 +1,15 @@
 export class MoneyExchanger {
-    async exchangeCurrency(amount, exchangefrom, exchangeto) {
+    constructor() {
+        this.conversionRate;
+        this.targetCurrency;
+        this.baseAmount
+        this.targetAmount;
+    }
+    async exchangeCurrency() {
         try {
-            let exchange = await fetch(`https://prime.exchangerate-api.com/v5/${process.env.API_KEY}/pair/${exchangefrom}/${exchangeto}/${amount}`, {
+            let exchange = await fetch(`https://prime.exchangerate-api.com/v5/${process.env.API_KEY}/latest/USD`, {
                 "method": "GET"
-            })
+            });
 
 
             let jsonResponse;
@@ -17,5 +23,9 @@ export class MoneyExchanger {
         } catch (error) {
             return false;
         }
+    }
+
+    convert() {
+        this.targetAmount = (this.baseAmount * this.conversionRate)
     }
 }
