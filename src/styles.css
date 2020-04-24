@@ -7,6 +7,7 @@ body {
   margin: auto;
   width: 70%;
   padding-top: 2%;
+  font-size: 150%;
 }
 
 .card {
@@ -16,7 +17,7 @@ body {
 
 #results {
   display: none;
-  font-size: 200%;
+  font-size: 150%;
 }
 
 #start-money {
@@ -27,4 +28,9 @@ body {
 #end-money {
   font-weight: bolder;
   color: green;
+  /* text-shadow: 2px 2px 2px grey; */
+}
+
+#amount #target {
+  margin-left: 5%;
 }
