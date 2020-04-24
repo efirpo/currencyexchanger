@@ -18,7 +18,6 @@ $(document).ready(function () {
       moolah.conversionRates = Object.entries(response.conversion_rates)
       moolah.getConversionRate();
       moolah.convert();
-      console.log(moolah.targetAmount)
       checkResponse(response);
       function checkResponse(response) {
         if (response == undefined) {
@@ -31,5 +30,4 @@ $(document).ready(function () {
       }
     })();
   });
-
 });
