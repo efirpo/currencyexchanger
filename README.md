@@ -1,17 +1,25 @@
-# TITLE
+# Currency Exchanger
 
 ## by Ethan Firpo (2020)
 
 ## Description
 
+This site will allow a user to enter an amount in one currency and see the exchange rate and value of that amount in another chosen currency.
+
 ## Setup
+
+Clone this repository. Install Node. In your terminal, type npm install. Then type npm run start. Open the built server if it does not open automatically.
 
 ## Technology
 
-## Specs
-
-|Behavior|Input|Output|
-|-----|-----|-----|
+#### HTML
+#### CSS
+#### Bootstrap Style Library
+#### JavaScript
+#### jQuery Script Library
+#### Node
+#### Webpack
+#### ExchangeRate API
 
 ## Legal
 
