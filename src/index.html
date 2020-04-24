@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
     <title>Currency Exchanger</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="card">
+        <div class="card animated bounceInDown">
             <form id="moneyForm">
-                <label for="amount">Enter Amount in US Dollars:</label>
+                <label for="amount">Enter amount in US dollars:</label>
                 <input id="amount" type="number" step=".01"><br>
-                <label for="target">Choose What Currency to Convert To</label>
+                <label for="target">Choose what currency to convert to:</label>
                 <select id="target">
                     <option value="AED">UAE Dirham</option>
                     <option value="ARS">Argentine Peso</option>
@@ -68,14 +69,12 @@
                     <option value="ZAR">South African Rand</option>
 
                 </select><br>
-                <button type="submit" class="btn btn-success">Convert!</button>
+                <button type="submit" class="btn btn-success">Convert!</button><br>
             </form><br>
         </div>
         <br><br>
-        <div class="card">
-            <div id="results">
-
-            </div>
+        <div class="card animated bounceInUp" id="results">
+            <p>Your <span id="start-money"></span> converts to <span id="end-money"></span></p>
         </div>
     </div>
 </body>

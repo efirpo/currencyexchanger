@@ -13,5 +13,16 @@ body {
 }
 
 #results {
+  display: none;
   font-size: 200%;
+}
+
+#start-money {
+  font-weight: bolder;
+  color: darkgreen;
+}
+
+#end-money {
+  font-weight: bolder;
+  color: green;
 }

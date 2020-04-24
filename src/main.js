@@ -1,4 +1,6 @@
 import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './animate.css'
 import './styles.css';
 import { MoneyExchanger } from './../src/currency.js'
 import $ from 'jquery';
@@ -22,7 +24,9 @@ $(document).ready(function () {
         if (response == undefined) {
           $("#results").append("We're sorry, something went wrong. Please try a different currency.")
         } else {
-          $("#results").append(`Your ${moolah.baseAmount} USD converts to ${moolah.targetAmount} ${moolah.targetCurrency}`)
+          $("#results").fadeIn();
+          $("#start-money").html(`${moolah.baseAmount} USD`)
+          $("#end-money").html(`${moolah.targetAmount} ${moolah.targetCurrency}`)
         }
       }
     })();
