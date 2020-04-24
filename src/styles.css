@@ -28,9 +28,13 @@ body {
 #end-money {
   font-weight: bolder;
   color: green;
-  /* text-shadow: 2px 2px 2px grey; */
+
 }
 
 #amount #target {
   margin-left: 5%;
+}
+
+.btn {
+  font-size: 150%;
 }
