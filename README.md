@@ -15,11 +15,21 @@ Clone this repository. Install Node. In your terminal, type npm install. Then ty
 #### HTML
 #### CSS
 #### Bootstrap Style Library
+#### Animate CSS Style Library
 #### JavaScript
 #### jQuery Script Library
 #### Node
 #### Webpack
 #### ExchangeRate API
+
+## Specs
+|Behavior|Input|Output|
+|-----|-----|-----|
+|Program will take input amount from user and store it|100.00|amount: 100.00|
+|Program will allow the user to choose a foregin currency and store it|Canadian Dollars|targetCurrency: CAD|
+|Program will make call to ExchangeRate API|?|?|
+|Program will use information from API to calculate exchange rates|100.00 USD|141.17 CAD|
+
 
 ## Legal
 
