@@ -1,8 +1,7 @@
 export class MoneyExchanger {
     constructor() {
-        this.conversionKeys;
-        this.conversionValues;
-        this.conversionRate;
+        this.exchangeRate;
+        this.conversionRates;
         this.targetCurrency;
         this.baseAmount;
         this.targetAmount;
@@ -28,16 +27,18 @@ export class MoneyExchanger {
     }
 
     convert() {
-        this.targetAmount = (this.baseAmount * this.conversionRate)
+        this.targetAmount = (this.baseAmount * this.exchangeRate).toFixed(2)
     }
 
     getConversionRate() {
-        for (let i = 0; i <= this.conversionKeys.length; i++) {
-            if (this.conversionKeys[i] == this.targetCurrency) {
-                this.exchangeRate = this.conversionValues[i]
+        for (let i = 0; i < this.conversionRates.length; i++) {
+            if (this.conversionRates[i][0] == this.targetCurrency) {
+                this.exchangeRate = this.conversionRates[i][1]
             }
-            break
         }
 
     }
 }
+
+
+

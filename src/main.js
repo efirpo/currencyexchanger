@@ -15,10 +15,15 @@ $(document).ready(function () {
       moolah.conversionValues = Object.values(response.conversion_rates)
       moolah.baseAmount = amount
       moolah.targetCurrency = changeTo
+      moolah.conversionRates = Object.entries(response.conversion_rates)
       moolah.getConversionRate();
-      console.log(moolah.targetCurrency)
-      console.log(moolah.exchangeRate)
-      console.log(response);
+      moolah.convert();
+      console.log(moolah.targetAmount)
+      // console.log(moolah.conversionRates)
+      // console.log(moolah.targetCurrency)
+      // console.log(moolah.exchangeRate)
+      // console.log(response);
+      $("#results").append(moolah.targetAmount)
       // function getAmount(response) {
       //   $("#results").append(`${response.conversion_rate} <br> ${response.conversion_result} <br> ${response.target}`)
 
